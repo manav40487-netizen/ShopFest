@@ -1,0 +1,26 @@
+{
+  "name": "shopfest-fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "Manav",
+    "Microservice"
+  ],
+  "license": "ISC",
+  "author": "Manav",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+  
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "build": "cd frontend && npm install && npm run build",
+    "start": "cd backend && npm start",
+    "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "npm --prefix backend run dev",
+    "start:frontend": "set PORT=3001 && npm --prefix frontend start",
+    "seed": "npm --prefix backend run seed"
+  },
+  "dependencies": {
+    "concurrently": "^10.0.3"
+  }
+}
