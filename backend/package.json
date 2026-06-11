@@ -13,6 +13,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
+    "build": "npm --prefix ../frontend install && npm --prefix ../frontend run build",
+    "postinstall": "npm --prefix ../frontend install && npm --prefix ../frontend run build",
     "seed": "node seed.js"
   },
   "dependencies": {
