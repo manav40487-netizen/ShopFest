@@ -4,8 +4,9 @@ A full-stack e-commerce platform built with the MERN stack (MongoDB, Express.js,
 
 ## 🚀 Live Demo
 
-> _Add your live link here after deployment_
+> https://shopfest.onrender.com
 
+## 📸 Screenshots
 
 ## ✨ Features
 
