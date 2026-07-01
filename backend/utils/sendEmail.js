@@ -8,6 +8,7 @@ const sendEmail = async ({ email, subject, message }) => {
         user: process.env.GMAIL_USER,
         pass: process.env.GMAIL_PASS, // App Password mapping
       },
+      family: 4
     });
 
     const mailOptions = {

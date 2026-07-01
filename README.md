@@ -12,22 +12,22 @@ A full-stack e-commerce platform built with the MERN stack (MongoDB, Express.js,
 ![Home Page](./Screenshots/homepage.png)
 
 ### 🛍️ Shop Page
-![Shop Page](./screenshots/shop.png)
+![Shop Page](./Screenshots/shop.png)
 
 ### 📄 Product Details
-![Product Details](./screenshots/product-details.png)
+![Product Details](./Screenshots/product-details.png)
 
 ### 🛒 Cart 
-![Cart](./screenshots/cart.png)
+![Cart](./Screenshots/cart.png)
 
 ### 🛒 Checkout
-![Checkout](./screenshots/checkout.png)
+![Checkout](./Screenshots/checkout.png)
 
 ### 💳 Razorpay Payment
-![Payment](./screenshots/razorpay-payment.png)
+![Payment](./Screenshots/razorpay-payment.png)
 
 ### 📊 Admin Dashboard
-![Admin Dashboard](./screenshots/admin-dashboard.png)
+![Admin Dashboard](./Screenshots/admin-dashboard.png)
 
 
 ## ✨ Features
