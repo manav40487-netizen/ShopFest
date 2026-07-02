@@ -2,12 +2,15 @@ const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
   host: "smtp-relay.brevo.com",
-  port: 587,
-  secure: false, // false for port 587
+  port: 465,
+  secure: true,
   auth: {
     user: process.env.BREVO_USER,
     pass: process.env.BREVO_PASS,
   },
+  connectionTimeout: 60000,
+  greetingTimeout: 60000,
+  socketTimeout: 60000,
 });
 
 transporter.verify(function (error, success) {
@@ -23,7 +26,7 @@ const sendEmail = async ({ email, subject, message }) => {
     const info = await transporter.sendMail({
       from: `"ShopFest Support" <${process.env.SENDER_EMAIL}>`,
       to: email,
-      subject: subject,
+      subject,
       html: message,
     });
 
