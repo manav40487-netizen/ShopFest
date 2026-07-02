@@ -21,7 +21,8 @@
     "seed": "npm --prefix backend run seed"
   },
   "dependencies": {
-    "concurrently": "^10.0.3",
-    "nodemailer": "^9.0.3"
+    "@getbrevo/brevo": "^5.0.4",
+    "axios": "^1.18.1",
+    "concurrently": "^10.0.3"
   }
 }
