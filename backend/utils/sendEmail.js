@@ -3,12 +3,13 @@ const nodemailer = require('nodemailer');
 const sendEmail = async ({ email, subject, message }) => {
   try {
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.resend.com',
+      port: 465,
+      secure: true,
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_PASS, // App Password mapping
+        user: 'resend',
+        pass: process.env.RESEND_API_KEY,
       },
-      family: 4
     });
 
     const mailOptions = {
