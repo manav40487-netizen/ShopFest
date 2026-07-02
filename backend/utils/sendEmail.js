@@ -1,29 +1,19 @@
-const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const sendEmail = async ({ email, subject, message }) => {
   try {
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.resend.com',
-      port: 465,
-      secure: true,
-      auth: {
-        user: 'resend',
-        pass: process.env.RESEND_API_KEY,
-      },
-    });
-
-    const mailOptions = {
-      from: `"Shopfest Support" <${process.env.GMAIL_USER}>`,
+    await resend.emails.send({
+      from: 'ShopFest Support <onboarding@resend.dev>',
       to: email,
       subject: subject,
       html: message,
-    };
-
-    await transporter.sendMail(mailOptions);
+    });
     console.log(`Email successfully sent to ${email}`);
   } catch (error) {
     console.error(`Failed to send email to ${email}: ${error.message}`);
   }
 };
 
-module.exports = sendEmail; 
+module.exports = sendEmail;

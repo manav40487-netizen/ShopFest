@@ -9,7 +9,6 @@
   "author": "Manav",
   "type": "commonjs",
   "main": "index.js",
-
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
@@ -27,7 +26,8 @@
     "mongoose": "^9.6.2",
     "multer": "^2.1.1",
     "nodemailer": "^8.0.8",
-    "razorpay": "^2.9.6"
+    "razorpay": "^2.9.6",
+    "resend": "^6.16.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
