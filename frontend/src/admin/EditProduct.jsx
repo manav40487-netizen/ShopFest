@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { useParams, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const EditProduct = () => {
   const { id } = useParams();
@@ -38,7 +39,7 @@ const EditProduct = () => {
     });
     setLoading(false);
     if (res.ok) {
-      alert('Product updated successfully!');
+      toast.success('Product updated successfully! ✅');
       navigate('/admin/products');
     }
   };

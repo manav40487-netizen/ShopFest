@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
+import { toast } from 'react-toastify';
 import '../styles/auth.css';
 
 const Register = () => {
@@ -26,10 +27,10 @@ const Register = () => {
       });
       const data = await res.json();
       if (res.ok) {
-        alert('OTP sent to your email! Please check your inbox.');
+        toast.success('OTP sent to your email! 📧');
         setStep(2); // show OTP input
       } else {
-        alert(data.message);
+        toast.error('Invalid OTP. Please try again.');
       }
     } catch (error) {
       console.error(error);

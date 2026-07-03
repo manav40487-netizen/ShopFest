@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
+import { toast } from 'react-toastify';
 import '../styles/auth.css';
 
 const Login = () => {
@@ -22,7 +23,7 @@ const Login = () => {
         login(data);
         navigate('/');
       } else {
-        alert(data.message);
+        toast.error(data.message);
       }
     } catch (error) {
       console.error(error);

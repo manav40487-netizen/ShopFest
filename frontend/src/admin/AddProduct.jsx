@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const AddProduct = () => {
   const { user } = useContext(AuthContext);
@@ -19,7 +20,7 @@ const AddProduct = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!image) return alert('Please select an image');
+    if (!image) { toast.warning('Please select an image'); return; }
     
     setLoading(true);
     const data = new FormData();
@@ -39,10 +40,10 @@ const AddProduct = () => {
       const responseData = await res.json();
       
       if (res.ok) {
-        alert('Product created successfully with Cloudinary Image URL!');
+        toast.success('Product created successfully! 🎉');
         navigate('/shop');
       } else {
-        alert(responseData.message || 'Error creating product');
+        toast.error(responseData.message || 'Error creating product');
       }
     } catch (error) {
       console.error(error);

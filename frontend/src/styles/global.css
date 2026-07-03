@@ -106,3 +106,23 @@ h2 {
 ::-webkit-scrollbar-thumb:hover {
   background: #3f3f46; 
 }
+
+/* Profile Page Responsive */
+@media (max-width: 768px) {
+  /* Fix header section with name and logout button */
+  .profile-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px;
+  }
+}
+
+/* Button Click Effect */
+.btn {
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}

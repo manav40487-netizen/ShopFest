@@ -43,14 +43,22 @@ const Profile = () => {
     navigate('/login');
   };
 
-  const containerStyle = { maxWidth: '1000px', margin: '40px auto', padding: '30px', background: '#18181b', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)', color: '#fafafa' };
+  const containerStyle = {
+  maxWidth: '1000px',
+  margin: '40px auto',
+  padding: '30px 16px', 
+  background: '#18181b',
+  borderRadius: '12px',
+  border: '1px solid rgba(255,255,255,0.05)',
+  color: '#fafafa'};
+
   const badgeStyle = { background: 'rgba(249,115,22,0.1)', color: '#f97316', padding: '6px 12px', borderRadius: '8px', fontSize: '0.9rem', fontWeight: 'bold', display: 'inline-block' };
 
   if (!user) return null;
 
   return (
     <div style={containerStyle}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '30px', marginBottom: '30px' }}>
+      <div className="profile-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '30px', marginBottom: '30px' }}>
         <div>
           <h2 style={{ color: '#fff', fontSize: '2.2rem', marginBottom: '10px' }}>My Profile</h2>
           <p style={{ color: '#a1a1aa', fontSize: '1.2rem', marginBottom: '5px' }}><strong>Name:</strong> {user.name}</p>

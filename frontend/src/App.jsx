@@ -20,10 +20,14 @@ import AdminProducts from './admin/AdminProducts';
 import EditProduct from './admin/EditProduct';
 import AdminOrders from './admin/AdminOrders';
 import AdminUsers from './admin/AdminUsers';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop /> 
       <Navbar />
       <div className="main-content">
         <Routes>
@@ -47,6 +51,12 @@ function App() {
           <Route path="/admin/users" element={<AdminUsers />} />
         </Routes>
       </div>
+      <ToastContainer 
+       position="top-right"
+      autoClose={3000}
+      hideProgressBar={false}
+      closeOnClick
+      pauseOnHover/>
       <Footer />
     </Router>
   );
